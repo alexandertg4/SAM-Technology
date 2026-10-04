@@ -2,7 +2,7 @@
 name = "sam-outbound"
 version = "0.1.0"
 description = "Outbound tooling for SAM Technology: hiring-signal prospecting into Instantly, and Instantly-to-HubSpot sync."
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 dependencies = [
   "httpx>=0.27",
   "fastapi>=0.110",
