@@ -91,3 +91,11 @@ def test_webhook_requires_token():
     assert resp.status_code == 200
     assert resp.json()["results"][0]["status"] == "synced"
     assert len(hs.of("deals")) == 1
+
+
+def test_suppress_blocks_isp_addresses_individually():
+    hs, inst = FakeHubSpotAPI(), FakeInstantlyAPI()
+    for email in ["a@sbcglobal.net", "b@verizon.net", "c@proton.me", "d@att.net"]:
+        hs.seed("contacts", {"email": email, "lifecyclestage": "customer"})
+    blocked = suppress_customers(hs.client(), inst.client())
+    assert blocked == ["a@sbcglobal.net", "b@verizon.net", "c@proton.me", "d@att.net"]

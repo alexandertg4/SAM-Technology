@@ -23,8 +23,14 @@ COLD = {
     "lead_unsubscribed": "UNQUALIFIED",
     "email_bounced": "UNQUALIFIED",
 }
-FREE_MAIL = {"gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "aol.com", "icloud.com", "msn.com",
-             "comcast.net", "live.com", "me.com"}
+FREE_MAIL = {
+    "gmail.com", "googlemail.com", "yahoo.com", "ymail.com", "rocketmail.com", "outlook.com", "hotmail.com",
+    "live.com", "msn.com", "aol.com", "icloud.com", "me.com", "mac.com", "mail.com", "gmx.com", "zoho.com",
+    "proton.me", "protonmail.com", "pm.me", "fastmail.com", "comcast.net", "sbcglobal.net", "att.net",
+    "bellsouth.net", "verizon.net", "optonline.net", "cox.net", "charter.net", "earthlink.net", "frontier.com",
+    "frontiernet.net", "windstream.net", "centurylink.net", "roadrunner.com", "twc.com", "rr.com", "juno.com",
+    "netzero.net", "q.com", "embarqmail.com", "suddenlink.net", "mediacombb.net", "hughes.net", "aim.com",
+}
 
 
 @dataclass
